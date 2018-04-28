@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="636ab5d8-4221-4ef2-ac29-2d22870b52e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/desi_command_control/.idea/workspace.xml" afterPath="$PROJECT_DIR$/desi_command_control/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/admin.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/apps.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/forms.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/tests.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/tokens.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/accounts/views.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/aes_decrypt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/aes_encrypt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/base_library.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/out00-Analysis.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/out00-EXE.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/out00-PKG.pkg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/out00-PKG.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/out00-PYZ.pyz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/out00-PYZ.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/warnlistener-1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-1/xref-listener-1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/out00-Analysis.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/out00-EXE.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/out00-PKG.pkg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/out00-PKG.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/out00-PYZ.pyz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/out00-PYZ.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/warnlistener-6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/build/listener-6/xref-listener-6.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/c2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/admin.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/apps.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/forms.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/migrations/0002_auto_20180408_0120.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/migrations/0003_auto_20180408_0121.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/migrations/0004_auto_20180412_0053.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/migrations/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/tests.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/urls.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/command_control/views.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/db.sqlite3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/desi_command_control/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/desi_command_control/settings.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/desi_command_control/urls.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/desi_command_control/wsgi.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/admin.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/apps.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/middleware.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/migrations/0002_auto_20160706_1421.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/migrations/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/otp.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/static/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templates/base.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templates/configure.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templates/disable_mfa.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templates/enable_mfa.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templates/login_verify.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templates/security.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templatetags/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/templatetags/otp_tags.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/tests.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/totp.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/urls.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/django_mfa/views.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/aes_decrypt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/aes_encrypt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/aeserver.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/aeshell.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/cert.pem" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/client.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/client2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/conn.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/encrypt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/generate_keys.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/key.pem" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/payload.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/scratchpad.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/scratchpad2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/scratchpad3.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/server.cert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/server.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/server.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/server2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/server3.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/extra/temp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/generate_payload.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/listener-%d.spec" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/listener-1.spec" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/listener-6.spec" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/manage.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/migrate.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/run.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/server.cert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/server.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/base.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/bootstrap-theme.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/changelists.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/dashboard.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/fonts.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/forms.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/nonadmin-login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/rtl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/widgets.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/css/xterm.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/fonts/README.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/README.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/calendar-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/gis/move_vertex_off.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/gis/move_vertex_on.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-addlink.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-alert.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-calendar.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-changelink.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-clock.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-deletelink.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-no.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-unknown-alt.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-unknown.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/icon-yes.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/inline-delete.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/search.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/selector-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/sorting-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/tooltag-add.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/img/tooltag-arrowright.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/SelectBox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/SelectFilter2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/actions.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/actions.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/calendar.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/cancel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/change_form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/collapse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/collapse.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/core.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/inlines.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/inlines.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/jquery.init.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/popup_response.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/prepopulate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/prepopulate.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/prepopulate_init.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/pty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/timeparse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/urlify.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/vendor/jquery/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/vendor/xregexp/xregexp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/admin/js/xterm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/bootstrap-theme.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/codemirror.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/highlight.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/css/term.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/codemirror.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/highlight.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/pty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/pty_win.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/python.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/term.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/js/termlib.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-10.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-3.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-4.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-6" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-6.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-6.spec" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/static/payloads/listener-7.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/temp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/base.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/confirm_host_delete.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/confirm_listener_delete.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/host.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/listener_detail.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/listener_edit.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/listener_list.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/login-base.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/password_change_form.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/scratch.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/term-base.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/term.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/terminal.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/desi_command_control/templates/user_login.html" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/desi_command_control/extra/scratchpad3.py" />
+        <option value="$PROJECT_DIR$/desi_command_control/extra/scratchpad2.py" />
+        <option value="$PROJECT_DIR$/desi_command_control/extra/scratchpad.py" />
+        <option value="$PROJECT_DIR$/desi_command_control/c2.py" />
+        <option value="$PROJECT_DIR$/desi_command_control/command_control/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Web-Based-Command-Control" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Web-Based-Command-Control" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/desi_command_control/extra" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="636ab5d8-4221-4ef2-ac29-2d22870b52e0" name="Default" comment="" />
+      <created>1524697938835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524697938835</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/desi_command_control/generate_payload.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/generate_payload.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/extra/scratchpad.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/extra/aes_encrypt.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/extra/scratchpad3.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desi_command_control/extra/c2.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/extra/scratchpad.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/extra/scratchpad2.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/generate_payload.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/c2.py" />
+    <entry file="file://$PROJECT_DIR$/desi_command_control/command_control/views.py" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
