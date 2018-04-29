@@ -6,3 +6,8 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 This is a web based command control for windows, mac OS and linux. 
 
 moving c2 from synchronous to asynchronous. Work in progress !
+
+CREDITS : 
+https://github.com/MicroPyramid/django-mfa
+https://tutorial.djangogirls.org
+http://www.masswerk.at/termlib/
