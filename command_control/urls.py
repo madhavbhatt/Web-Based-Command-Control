@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^host/(?P<pk>\d+)/$', views.host, name='host'),
     url(r'^host/(?P<pk>\d+)/delete/$', views.host_delete, name='host_delete'),
     url(r'^result/(?P<pk>\d+)/$', views.result, name='result'),
+    # url(r'^get_result/(?P<pk>\d+)/$', views.get_result, name='get_result'),
     url(r'^listener/list/$', views.listener_list, name='listener_list'),
     url(r'^listener/(?P<pk>\d+)/replay$', views.listener_replay, name='listener_replay'),
     url(r'^listener/(?P<pk>\d+)/$', views.listener_detail, name='listener_detail'),

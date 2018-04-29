@@ -84,34 +84,41 @@
                               callback: mySocketCallback
                             }
                           );
+                          this.write("command has been sent. \n\n");
+                          this.prompt();
                           return;
                         {% endif %}
 
-                      function mySocketCallback() {
+                      function mySocketCallback()
+                          {
                             if (this.socket.success) {
-                               // status 200 OK
-                               this.write(this.socket.responseText);
+                                // status 200 OK
+                                this.write("\n Agent sent results ..!! \n\n");
+                                this.write(this.socket.responseText);
                             }
                             else if (this.socket.errno) {
-                               // connection failed
-                               this.write("Connection error: " + this.socket.errstring);
+                                // connection failed
+                                this.write("\n\n");
+                                this.write("Connection error: " + this.socket.errstring);
+                                mySocketCallback();
                             }
                             else {
-                               // connection succeeded, but server returned other status than 2xx
-                               this.write("Server returned: " +
-                                          this.socket.status + " " + this.socket.statusText);
+                                 // connection succeeded, but server returned other status than 2xx
+                                 this.write("\n\n");
+                                 this.write("Server returned: " +
+                                 this.socket.status + " " + this.socket.statusText);
+                                 mySocketCallback();
                             }
                             this.prompt();
                           }
                        this.newLine();
                       }
-                else {
-                    this.write('usage : shell ' + cmd);
-                }
+                else
+                    {
+                        this.write('usage : shell ' + cmd);
+                    }
             }
-
                 this.prompt();
-
         }
 
         function termExitHandler() {
