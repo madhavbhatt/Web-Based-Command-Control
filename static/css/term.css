@@ -219,6 +219,7 @@ div.left {
 a,a:link,a:visited{
     text-decoration:none;
     color:#77dd11;
+    font-weight: bold;
 
 }
 a:hover{

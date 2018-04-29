@@ -52,7 +52,8 @@
             }
         }
 
-        function termHandler() {
+        function termHandler()
+        {
             // called on <CR> or <ENTER>
             this.newLine();
             var cmd=this.lineBuffer;
@@ -127,8 +128,39 @@
             var other=(this.id==1)? 2:1;
             if ((term[other]) && (term[other].closed==false)) term[other].focus();
         }
+        function testInsertAsTypedText() {
+                if ((!term) || (term.closed)) {
+                    alert('Please open a terminal first!');
+                    return;
+                }
+                var t=prompt('Please enter a text to be typed:');
+                if (t) TermGlobals.insertText(t);
+            }
 
-        </script>
+        var useMultiLineImport=false;
+
+        function testMultiLine(funcFlag)
+            {
+                useMultiLineImport=funcFlag;
+                TermGlobals.keylock = true;
+                TermGlobals.setVisible('promptDiv', true);
+                document.forms.promptForm.content.focus();
+            }
+
+        function promptHandler(text) {
+            TermGlobals.setVisible('promptDiv', false);
+            TermGlobals.keylock = false;
+            if (text) {
+                if (useMultiLineImport) {
+                    TermGlobals.importMultiLine(text);
+                }
+                else {
+                    TermGlobals.importEachLine(text);
+                }
+        }
+}
+
+    </script>
     </head>
     <body>
         <div class="page-header">
@@ -146,6 +178,7 @@
                     {% csrf_token %}
                     <input type="text" size="20" name="search" placeholder="Search..." class="box">
                 </form>-->
+
             <h1><a href="/">Django desi_command_control</a></h1>
         </div>
         <!-- Sidebar -->
@@ -156,7 +189,24 @@
                 <a href="{% url 'host' pk=pwnedhost.pk %}" class="button">{{ pwnedhost.ip }}</a>
             {% endfor %}
         </div>
-
+        <div id="promptDiv" style="position:absolute; top: 60px; left: 340px; background-color: #ddd; border-color: #fff #888 #888 #fff; border-width: 1px; border-style: solid;z-index:2; visibility: hidden;">
+            <table border="0" cellspacing="8" cellpadding="2">
+            <tr>
+            <td style="font-family: arial,helvetica,sans-serif; font-size: 12px; color: #000;">Please enter a text to import:</td>
+            </tr>
+            <form id="promptForm">
+            <tr>
+            <td><textarea name="content" cols="40" rows="6""></textarea></td>
+            </tr>
+            <tr>
+            <td align="right">
+                <input type="button" value="Cancel" onclick="promptHandler(null, false); this.form.content.value='';">
+                <input type="button" value="Import" onclick="promptHandler(this.form.content.value); this.form.content.value='';">
+            </td>
+            </tr>
+            </form>
+            </table>
+        </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
