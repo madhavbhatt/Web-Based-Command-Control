@@ -1,6 +1,7 @@
 from http.server import *
 import random
 import string
+import ssl
 from command_control.models import pwnedHost
 
 
@@ -69,6 +70,7 @@ def run(auth_user, ip , port, enc_key):
     server_address = (ip, port)
     httpd = HTTPServer(server_address, Server_Response)
     # httpd.socket = ssl.wrap_socket (httpd.socket, certfile='server.cert', keyfile='server.key', server_side=True)
+    httpd.socket = ssl.wrap_socket(httpd.socket, certfile='server.cert', keyfile="server.key", server_side=True)
     print('running server...')
     httpd.serve_forever()
 
