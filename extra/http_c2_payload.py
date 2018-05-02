@@ -2,7 +2,7 @@ import os, ssl, time, http.client
 
 # http.client.HTTPConnection('172.16.69.132:4443', timeout=10) => HTTP communication
 
-
+"""
 def first_time():
     try:
         first_connection = http.client.HTTPSConnection('172.16.69.130:4443', timeout=10, context=ssl._create_unverified_context())
@@ -11,6 +11,7 @@ def first_time():
         first_connection.close()
     except:
         pass
+"""
 
 
 def callback():
@@ -26,7 +27,7 @@ def callback():
         pass
 
 
-first_time()
+# first_time()
 
 
 while 1:
