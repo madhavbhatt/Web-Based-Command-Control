@@ -33,7 +33,7 @@
                     {
                         x: x,
                         y: y,
-                        rows: 40,
+                        rows: 45,
                         greeting: '%+r +++ Terminal #'+n+' ready. +++ %-r%nType "help" for help.%n',
                         id: n,
                         termDiv: 'termDiv'+n,
@@ -153,15 +153,16 @@
             if (text) {
                 if (useMultiLineImport) {
                     TermGlobals.importMultiLine(text);
+                    document.body.style.background = '';
                 }
                 else {
                     TermGlobals.importEachLine(text);
+                    document.body.style.background = '';
                 }
+            }
         }
-}
-
-    </script>
-    </head>
+        </script>
+        </head>
     <body>
         <div class="page-header">
                 <!--<span class="glyphicon glyphicon-plus"></span>-->
@@ -189,19 +190,19 @@
                 <a href="{% url 'host' pk=pwnedhost.pk %}" class="button">{{ pwnedhost.ip }}</a>
             {% endfor %}
         </div>
-        <div id="promptDiv" style="position:absolute; top: 60px; left: 340px; background-color: #ddd; border-color: #fff #888 #888 #fff; border-width: 1px; border-style: solid;z-index:2; visibility: hidden;">
+        <div id="promptDiv" style="position:absolute; top: 300px; left: 600px; background-color: #ddd; border-color: #fff #888 #888 #fff; border-width: 1px; border-style: solid;z-index:2; visibility: hidden;">
             <table border="0" cellspacing="8" cellpadding="2">
             <tr>
             <td style="font-family: arial,helvetica,sans-serif; font-size: 12px; color: #000;">Please enter a text to import:</td>
             </tr>
             <form id="promptForm">
             <tr>
-            <td><textarea name="content" cols="40" rows="6""></textarea></td>
+            <td><textarea name="content" cols="80" rows="20" id="blur"></textarea></td>
             </tr>
             <tr>
             <td align="right">
-                <input type="button" value="Cancel" onclick="promptHandler(null, false); this.form.content.value='';">
-                <input type="button" value="Import" onclick="promptHandler(this.form.content.value); this.form.content.value='';">
+                <input type="button" value="Cancel" onclick="promptHandler(null, false); this.form.content.value='';document.body.style.background = '';">
+                <input type="button" value="Import" onclick="promptHandler(this.form.content.value); this.form.content.value='';document.body.style.background = '';">
             </td>
             </tr>
             </form>

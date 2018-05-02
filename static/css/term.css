@@ -1,5 +1,60 @@
 /* Base styles */
+/*
+.blur-filter {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+/*
+.blur{
+  -webkit-filter: blur(5px); /* Chrome, Safari, Opera
+  filter: blur(5px);
+}
 
+
+.blury {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+*/
+
+/*
+div.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -webkit-backface-visibility: hidden;
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}
+
+.blury {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+body, #terminal_container {
+  height: 100%;
+  width: 100%;
+}
+*/
 
 body {
   position: relative;
