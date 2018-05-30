@@ -16,3 +16,6 @@ CREDITS :
 https://github.com/MicroPyramid/django-mfa
 https://tutorial.djangogirls.org
 http://www.masswerk.at/termlib/
+
+
+CHECK OUT MY POST at https://desi-intellect.com/post/8/ on how to create HTTP(S) command & control.

@@ -133,7 +133,7 @@ def runC2server():
 
     httpd = HTTPServer(server_address, c2Server)
 
-    httpd.socket = ssl.wrap_socket(httpd.socket, certfile='server.cert', keyfile="server.key", server_side=True)
+    httpd.socket = ssl.wrap_socket(httpd.socket, certfile='server.crt', keyfile="server.key", server_side=True)
 
     print("Server Started ..!!")
 
