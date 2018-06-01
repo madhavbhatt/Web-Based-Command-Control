@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['static/payloads/listener-1.py'],
-             pathex=['/mnt/hgfs/desi_command_control'],
+             pathex=['/mnt/hgfs/github/Web-Based-Command-Control'],
              binaries=[],
              datas=[],
              hiddenimports=[],

