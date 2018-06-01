@@ -13,8 +13,8 @@ Upcoming Features:
 This infrasctructure along with proxy would make a robust red team infrastructure.
  
 CREDITS : 
-https://github.com/MicroPyramid/django-mfa
-https://tutorial.djangogirls.org
+https://github.com/MicroPyramid/django-mfa,
+https://tutorial.djangogirls.org,
 http://www.masswerk.at/termlib/
 
 
