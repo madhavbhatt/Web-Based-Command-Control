@@ -133,13 +133,15 @@ def listener_delete(request, pk):
     except:
         raise Http404
 
+    # print(request.user.is_authenticated())
+
     if request.method == "POST":
         if listener.author != request.user:
             response = HttpResponse("You do not have permission to edit this listener")
             response.status_code = 403
             return response
 
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             Listener.objects.filter(id=listener.pk).delete()
             messages.info(request, "The listener has been deleted")
         return redirect("/")
