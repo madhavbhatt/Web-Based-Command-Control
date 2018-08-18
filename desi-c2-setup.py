@@ -79,12 +79,12 @@ for command in install_apache_python:
 os.chdir("/var/www")
 os.system("git clone https://github.com/madhavbhatt/Web-Based-Command-Control.git")
 os.system("mv Web-Based-Command-Control desi_command_control")
-os.chdir("/var/www/desi_command_control")
+os.chdir("/var/www/desi_command_control/")
 
-blog_setup_commands = ["pip install -r requirements.txt", "python manage.py makemigrations",
-                       "python manage.py migrate", "python manage.py collectstatic",
+blog_setup_commands = ["pip3 install -r requirements.txt", "python3 manage.py makemigrations",
+                       "python3 manage.py migrate", "python3 manage.py collectstatic",
                        "chown $whoami:www-data ../desi_command_control",
-                       "chmod g+w ../desi_command_control", "chown -R www-data:www-data media",
+                       "chmod g+w ../desi_command_control",
                        "chown $whoami:www-data db.sqlite3",
                        "chmod 664 db.sqlite3"]
 
