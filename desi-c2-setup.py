@@ -107,5 +107,5 @@ for ensite in apache_commands:
 for line in securing_apache:
     os.system(line)
 
-os.system("python manage.py createsuperuser")
+os.system("python3 manage.py createsuperuser")
 print("Go to https://" + str(ip))
