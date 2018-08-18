@@ -30,11 +30,12 @@ LOGIN_URL = "/login/"
 ALLOWED_HOSTS = ['*']
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATICFILES_DIRS = (
-  os.path.join(SITE_ROOT, 'static'),
-)
+#SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#STATICFILES_DIRS = (
+#  os.path.join(SITE_ROOT, 'static'),
+#)
 
 
 MEDIA_URL = '/media/'
