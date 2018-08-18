@@ -42,5 +42,5 @@ def gen_payload(id, port, key):
     f = open(file_name, 'w')
     f.write(string.format(**var))
     f.close()
-    os.system("pyinstaller --onefile --distpath static/payloads/ static/payloads/listener-%d.py" % id)
+    os.system("pyinstaller --onefile --specpath=static/payloads/ --distpath static/payloads/ static/payloads/listener-%d.py" % id)
 

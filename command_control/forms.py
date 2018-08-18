@@ -3,7 +3,7 @@ from django import forms
 
 
 class ListenerForm(forms.ModelForm):
-    title = forms.CharField(label='name', initial="reverse tcp listener")
+    title = forms.CharField(label='name', initial="reverse http listener")
     interface = forms.GenericIPAddressField(label='listener IP', initial="0.0.0.0" )
     port = forms.IntegerField(label='listener port')
 
