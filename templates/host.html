@@ -1,17 +1,28 @@
 {% extends 'term-base.html' %}
 {% block content %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <div class="container">
         <a title="remove" class="btn btn-default" href="{% url 'host_delete' pk=pwnedhost.pk %}" style="color:red">Delete Host</a>
 		<!--<a href="javascript:testMultiLine(false)" onfocus="if(this.blur)this.blur();" class="btn btn-default" >multiline command</a>-->
         <a href="#" onclick="document.body.style.background = 'black'; testMultiLine(true);" class="btn btn-default">paste command</a>
         <a href="javascript:termOpen(1)" onmouseover="window.status='terminal 1'; return true" onmouseout="window.status=''; return true" class="termopen" id="terminal"><!--<button class="button">Terminal 1</button>--></a>
-        <div id="termDiv1" style="position:absolute; top:20px; left:100px;"></div>
+        <div id="termDiv1" style="position:absolute; top:20px; left:100px;overflow:scroll;"></div>
         <a href="javascript:termOpen(2)" onmouseover="window.status='terminal 2'; return true" onmouseout="window.status=''; return true" class="termopen" id="terminal-2"><!--<button class="button">Terminal 2</button>--></a>
-        <div id="termDiv2" style="position:absolute; top:20px; left:100px;"></div>
+        <div id="termDiv2" style="position:absolute; top:20px; left:100px"></div>
     </div>
 <script>
-    document.getElementById('terminal').click();
-    document.getElementById('terminal-2').click();
+    var term1 = document.getElementById('terminal')
+    term1.click();
+
+    var term2 = document.getElementById('terminal-2');
+    term2.click();
+
+    x = 0;
+$(document).ready(function(){
+    $("div").scroll(function(){
+        $("span").text( x+= 1);
+    });
+});
 </script>
 {% endblock %}
 

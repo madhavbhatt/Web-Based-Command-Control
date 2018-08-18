@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 manage.py runsslserver 0.0.0.0:443
+python3 -B manage.py runsslserver 0.0.0.0:443
