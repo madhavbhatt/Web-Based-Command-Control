@@ -81,7 +81,7 @@ os.system("git clone https://github.com/madhavbhatt/Web-Based-Command-Control.gi
 os.system("mv Web-Based-Command-Control desi_command_control")
 os.chdir("/var/www/desi_command_control/")
 
-blog_setup_commands = ["pip3 install -r requirements.txt", "python3 manage.py makemigrations",
+blog_setup_commands = ["pip install --upgrade pip", "pip3 install --upgrade pip","pip3 install -r requirements.txt", "python3 manage.py makemigrations",
                        "python3 manage.py migrate", "python3 manage.py collectstatic",
                        "chown $whoami:www-data ../desi_command_control",
                        "chmod g+w ../desi_command_control",
