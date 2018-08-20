@@ -42,5 +42,5 @@ def gen_payload(id, port, key):
     f = open(file_name, 'w')
     f.write(string.format(**var))
     f.close()
-    os.system("pyinstaller --onefile --workpath=static/payloads/build --specpath=static/payloads/spec --distpath static/payloads/ static/payloads/listener-%d.py" % id)
+    os.system("pyinstaller --onefile --workpath=/var/www/desi_command_control/static/payloads/build --specpath=/var/www/desi_command_control/static/payloads/spec --distpath /var/www/desi_command_control/static/payloads/ /var/www/desi_command_control/static/payloads/listener-%d.py" % id)
 

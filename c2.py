@@ -64,7 +64,7 @@ class Server_Response(BaseHTTPRequestHandler):
         if URI == "/wp-post.php" and cookie == session_value and agent == user_agent:
             self.set_headers()
             if message:
-                self.wfile.write(bytes(message, 'utf8'))
+                self.wfile.write(bytes(message).encode("utf-8"))
                 host.cmd = ""
                 host.save()
         else:
@@ -115,7 +115,7 @@ def run(auth_user, ip , port, enc_key):
     server_address = (ip, port)
     httpd = HTTPServer(server_address, Server_Response)
     # httpd.socket = ssl.wrap_socket (httpd.socket, certfile='server.cert', keyfile='server.key', server_side=True)
-    httpd.socket = ssl.wrap_socket(httpd.socket, certfile='server.cert', keyfile="server.key", server_side=True)
+    httpd.socket = ssl.wrap_socket(httpd.socket, certfile='/var/www/desi_command_control/server.cert', keyfile="/var/www/desi_command_control/server.key", server_side=True)
     print('running server...')
     httpd.serve_forever()
 
