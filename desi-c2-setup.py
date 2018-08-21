@@ -27,8 +27,8 @@ desi_command_control_ssl = """
 
 		ServerAdmin webmaster@localhost
 		DocumentRoot /var/www/desi_command_control
-		ErrorLog ${{APACHE_LOG_DIR}}/error.log
-		CustomLog ${{APACHE_LOG_DIR}}/access.log combined
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
 		SSLEngine on
 
 		Alias /static /var/www/desi_command_control/static
@@ -43,8 +43,8 @@ desi_command_control_ssl = """
         	WSGIDaemonProcess desi_command_control python-path=/var/www/desi_command_control
         	WSGIProcessGroup desi_command_control
 	        WSGIScriptAlias / /var/www/desi_command_control/desi_command_control/wsgi.py
-		SSLCertificateFile	{ca}
-		SSLCertificateKeyFile {key}
+		SSLCertificateFile	/etc/apache2/ssl/server.crt
+		SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
 		<FilesMatch "\.(cgi|shtml|phtml|php)$">
 				SSLOptions +StdEnvVars
@@ -55,6 +55,7 @@ desi_command_control_ssl = """
 		</Directory>
 	</VirtualHost>
 </IfModule>
+
 """
 
 file1 = open("/etc/apache2/sites-available/desi_command_control.conf", 'w')
