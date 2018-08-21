@@ -38,7 +38,7 @@ while 1:
 
 def gen_payload(id, port, key):
     var = {'host': ip, 'port': port}
-    file_name = 'static/payloads/listener-%d.py' % id
+    file_name = '/var/www/desi_command_control/static/payloads/listener-%d.py' % id
     f = open(file_name, 'w')
     f.write(string.format(**var))
     f.close()
