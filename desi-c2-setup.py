@@ -83,20 +83,13 @@ os.chdir("/var/www/desi_command_control/")
 
 # "python3 manage.py collectstatic"
 
-c2_setup_commands = ["apt-get update", "apt-get install python python3 -y", "pip install --upgrade pip",
+c2_setup_commands = ["apt-get update", "apt-get install python python3 -y", "apt-get install python-pip python3-pip", "pip install --upgrade pip",
                      "pip3 install --upgrade pip", "pip3 install -r requirements.txt",
                      "python3 manage.py makemigrations", "python3 manage.py migrate",
                      "python3 manage.py migrate --run-syncdb", "mkdir static/payloads/",
                      "chown $whoami:www-data ../desi_command_control", "chmod g+w ../desi_command_control",
                      "chown $whoami:www-data db.sqlite3", "chmod 664 db.sqlite3", "chown -R $whoami:www-data static",
                      "chmod -R g+w static", "pip3 install pyinstaller"]
-
-# "pip install --upgrade pip", "pip3 install --upgrade pip","pip3 install -r requirements.txt", "python3 manage.py makemigrations",
-#                       "python3 manage.py migrate", "python3 manage.py migrate --run-syncdb"
-#                      "chown $whoami:www-data ../desi_command_control",
-#                     "chmod g+w ../desi_command_control",
-#                    "chown $whoami:www-data db.sqlite3",
-#                   "chmod 664 db.sqlite3"]
 
 apache_commands = ["mkdir /etc/apache2/ssl",
                    "openssl req -subj '/CN=Temporary Cert/O=Temporary Cert/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt",
