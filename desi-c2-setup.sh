@@ -7,6 +7,7 @@ cd /var/www/desi_command_control
 apt-get update
 apt-get install python python3 -y
 apt-get install python-pip python3-pip
+apt-get install python3-django
 pip install --upgrade pip
 pip3 install --upgrade pip
 pip3 install -r requirements.txt

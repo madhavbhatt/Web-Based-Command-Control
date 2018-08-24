@@ -66,7 +66,7 @@ file2 = open("/etc/apache2/sites-available/desi-command-control-ssl.conf", 'w')
 file2.write(desi_command_control_ssl.format(**var))
 file2.close()
 
-file3 = open("/etc/blog_secret_key.txt", 'w')
+file3 = open("/etc/secret_key_desi_c2.txt", 'w')
 file3.write(SECRET_KEY)
 file3.close()
 
@@ -83,9 +83,9 @@ os.chdir("/var/www/desi_command_control/")
 
 # "python3 manage.py collectstatic"
 
-c2_setup_commands = ["apt-get update", "apt-get install python python3 -y", "apt-get install python-pip python3-pip", "pip install --upgrade pip",
-                     "pip3 install --upgrade pip", "pip3 install -r requirements.txt",
-                     "python3 manage.py makemigrations", "python3 manage.py migrate",
+c2_setup_commands = ["apt-get update", "apt-get install python python3 -y", "apt-get install python-pip", " apt-get install python3-pip -y", "pip install --upgrade pip",
+                     "pip3 install --upgrade pip", "apt-get install python3-django -y", "apt-get install python-django -y", "pip3 install -r requirements.txt",
+                     "pip3 install django-sslserver", "python3 manage.py makemigrations", "python3 manage.py migrate",
                      "python3 manage.py migrate --run-syncdb", "mkdir static/payloads/",
                      "chown $whoami:www-data ../desi_command_control", "chmod g+w ../desi_command_control",
                      "chown $whoami:www-data db.sqlite3", "chmod 664 db.sqlite3", "chown -R $whoami:www-data static",
