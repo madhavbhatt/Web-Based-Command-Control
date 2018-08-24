@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'command_control',
     'accounts',
     'sslserver',
-    # 'django_mfa',
+    'django_mfa',
 ]
 
 MIDDLEWARE = [
