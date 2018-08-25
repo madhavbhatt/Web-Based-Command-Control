@@ -13,6 +13,12 @@ ca = "/etc/apache2/ssl/server.crt"
 key = "/etc/apache2/ssl/server.key"
 var = {'ip': ip, 'ca': ca, 'key': key}
 
+install_apache_python = ["apt-get update", "apt-get install apache2 -y", "apt-get install python python3 -y",
+                         "apt-get install python-pip python3-pip -y"]
+
+for command in install_apache_python:
+    os.system(command)
+
 desi_command_control = """
 <VirtualHost *:80>
 	Redirect "/" "https://{ip}/"
@@ -58,23 +64,17 @@ desi_command_control_ssl = """
 
 """
 
-file1 = open("/etc/apache2/sites-available/desi_command_control.conf", 'w')
+file1 = open("/etc/apache2/sites-available/desi_command_control.conf", 'w+')
 file1.write(desi_command_control.format(**var))
 file1.close()
 
-file2 = open("/etc/apache2/sites-available/desi-command-control-ssl.conf", 'w')
+file2 = open("/etc/apache2/sites-available/desi-command-control-ssl.conf", 'w+')
 file2.write(desi_command_control_ssl.format(**var))
 file2.close()
 
-file3 = open("/etc/secret_key_desi_c2.txt", 'w')
+file3 = open("/etc/secret_key_desi_c2.txt", 'w+')
 file3.write(SECRET_KEY)
 file3.close()
-
-install_apache_python = ["apt-get update", "apt-get install apache2 -y", "apt-get install python python3 -y",
-                         "apt-get install python-pip python3-pip -y"]
-
-for command in install_apache_python:
-    os.system(command)
 
 os.chdir("/var/www")
 os.system("git clone https://github.com/madhavbhatt/Web-Based-Command-Control.git")
@@ -83,15 +83,14 @@ os.chdir("/var/www/desi_command_control/")
 
 # "python3 manage.py collectstatic"
 
-c2_setup_commands = ["apt-get update", "apt-get install python python3 -y", "apt-get install python-pip", " apt-get install python3-pip -y", "pip install --upgrade pip",
-                     "pip3 install --upgrade pip", "apt-get install python3-django -y", "apt-get install python-django -y", "pip3 install -r requirements.txt",
-                     "pip3 install django-sslserver", "python3 manage.py makemigrations", "python3 manage.py migrate",
-                     "python3 manage.py migrate --run-syncdb", "mkdir static/payloads/",
+c2_setup_commands = ["apt-get install python-django -y", "apt-get install libapache2-mod-wsgi -y", "apt-get install python-setuptools -y",
+                     "pip install django-sslserver", "python manage.py makemigrations", "python manage.py migrate",
+                     "mkdir static/payloads/",
                      "chown $whoami:www-data ../desi_command_control", "chmod g+w ../desi_command_control",
                      "chown $whoami:www-data db.sqlite3", "chmod 664 db.sqlite3", "chown -R $whoami:www-data static",
-                     "chmod -R g+w static", "pip3 install pyinstaller"]
+                     "chmod -R g+w static", "pip install pyinstaller"]
 
-apache_commands = ["mkdir /etc/apache2/ssl",
+apache_commands = ["mkdir /etc/apache2/ssl", "a2enmod wsgi", "a2enmod ssl" ,
                    "openssl req -subj '/CN=Temporary Cert/O=Temporary Cert/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt",
                    "a2dissite 000-default.conf", "a2ensite desi_command_control.conf",
                    "a2ensite desi-command-control-ssl.conf",
@@ -111,5 +110,24 @@ for ensite in apache_commands:
 for line in securing_apache:
     os.system(line)
 
-os.system("python3 manage.py createsuperuser")
+os.system("python manage.py createsuperuser")
 print("Go to https://" + str(ip))
+
+"""
+apt-get install python-django -y
+apt-get install libapache2-mod-wsgi -y
+apt-get install python-setuptools -y
+a2enmod wsgi
+pip install django-sslserver
+# pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+mkdir static/payloads/
+chown $whoami:www-data ../desi_command_control
+chmod g+w ../desi_command_control
+chown $whoami:www-data db.sqlite3
+chmod 664 db.sqlite3
+chown -R $whoami:www-data static
+chmod -R g+w static
+pip install pyinstaller
+"""
