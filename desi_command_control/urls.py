@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^login/$', login_view, name='login'),
     url(r'^password_change/$', password_change, name="password_change"),
     url(r'^logout/$', logout_view, name='logout'),
-    # url(r'^settings/', include('django_mfa.urls')),
+    url(r'^settings/', include('django_mfa.urls')),
 ]
 
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

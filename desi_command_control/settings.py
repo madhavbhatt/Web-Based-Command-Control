@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'command_control',
     'accounts',
     'sslserver',
-    # 'django_mfa',
+    'django_mfa',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -63,7 +63,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'django_mfa.middleware.MfaMiddleware',
+    'django_mfa.middleware.MfaMiddleware',
 ]
 
 ROOT_URLCONF = 'desi_command_control.urls'
