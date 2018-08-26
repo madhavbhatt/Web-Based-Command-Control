@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from . import views
-
+from django.conf.urls import include
 
 urlpatterns = [
     url(r'^$', views.terminal, name='terminal'),
@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^payload/(?P<pk>\d+)/', views.payload_create, name='payload_create'),
     url(r'^payload/(?P<pk>\d+)/download', views.payload_download, name='payload_download'),
     url(r'^listener/(?P<pk>\d+)/delete/$', views.listener_delete, name='listener_delete'),
+    url(r'^settings/', include('django_mfa.urls', namespace="mfa")),
 ]
 
