@@ -84,7 +84,7 @@ os.chdir("/var/www/desi_command_control/")
 # "python3 manage.py collectstatic"
 
 c2_setup_commands = ["apt-get install python-django -y", "apt-get install libapache2-mod-wsgi -y", "apt-get install python-setuptools -y",
-                     "pip install django-sslserver", "python manage.py makemigrations", "python manage.py migrate",
+                     "pip install django-sslserver", "pip install django-mfa","python manage.py makemigrations", "python manage.py migrate",
                      "mkdir static/payloads/", "python manage.py collectstatic",
                      "chown $whoami:www-data ../desi_command_control", "chmod g+w ../desi_command_control",
                      "chown $whoami:www-data db.sqlite3", "chmod 664 db.sqlite3", "chown -R $whoami:www-data static",
