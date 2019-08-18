@@ -13,8 +13,8 @@ ca = "/etc/apache2/ssl/server.crt"
 key = "/etc/apache2/ssl/server.key"
 var = {'ip': ip, 'ca': ca, 'key': key}
 
-install_apache_python = ["apt-get update", "apt-get install apache2 -y", "apt-get install python python3 -y",
-                         "apt-get install python-pip python3-pip -y"]
+install_apache_python = ["apt-get update", "apt-get install apache2 -y", "apt-get install python3 -y",
+                         "apt-get install python3-pip -y"]
 
 for command in install_apache_python:
     os.system(command)
@@ -83,14 +83,16 @@ os.chdir("/var/www/desi_command_control/")
 
 # "python3 manage.py collectstatic"
 
-c2_setup_commands = ["apt-get install python-django -y", "apt-get install libapache2-mod-wsgi -y", "apt-get install python-setuptools -y",
-                     "pip install django-sslserver", "pip install django-mfa","python manage.py makemigrations", "python manage.py migrate",
-                     "mkdir static/payloads/", "python manage.py collectstatic",
+c2_setup_commands = ["apt-get install python3-django -y", "apt-get install libapache2-mod-wsgi-py3 -y",
+                     "apt-get install python3-setuptools -y",
+                     "pip3 install django-sslserver", "pip3 install django-mfa", "python3 manage.py makemigrations",
+                     "python3 manage.py migrate",
+                     "mkdir static/payloads/", "python3 manage.py collectstatic",
                      "chown $whoami:www-data ../desi_command_control", "chmod g+w ../desi_command_control",
                      "chown $whoami:www-data db.sqlite3", "chmod 664 db.sqlite3", "chown -R $whoami:www-data static",
-                     "chmod -R g+w static", "pip install pyinstaller"]
+                     "chmod -R g+w static", "pip3 install pyinstaller"]
 
-apache_commands = ["mkdir /etc/apache2/ssl", "a2enmod wsgi", "a2enmod ssl" ,
+apache_commands = ["mkdir /etc/apache2/ssl", "a2enmod wsgi", "a2enmod ssl",
                    "openssl req -subj '/CN=Temporary Cert/O=Temporary Cert/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt",
                    "a2dissite 000-default.conf", "a2ensite desi_command_control.conf",
                    "a2ensite desi-command-control-ssl.conf",
@@ -110,18 +112,18 @@ for ensite in apache_commands:
 for line in securing_apache:
     os.system(line)
 
-os.system("python manage.py createsuperuser")
+os.system("python3 manage.py createsuperuser")
 print("Go to https://" + str(ip))
 
 """
-apt-get install python-django -y
-apt-get install libapache2-mod-wsgi -y
-apt-get install python-setuptools -y
+apt-get install python3-django -y
+apt-get install libapache2-mod-wsgi-py3 -y
+apt-get install python3-setuptools -y
 a2enmod wsgi
-pip install django-sslserver
+pip3 install django-sslserver
 # pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py migrate
 mkdir static/payloads/
 chown $whoami:www-data ../desi_command_control
 chmod g+w ../desi_command_control
@@ -129,5 +131,5 @@ chown $whoami:www-data db.sqlite3
 chmod 664 db.sqlite3
 chown -R $whoami:www-data static
 chmod -R g+w static
-pip install pyinstaller
+pip3 install pyinstaller
 """
