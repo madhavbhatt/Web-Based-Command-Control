@@ -37,7 +37,7 @@ django-tinymce4-lite==1.7.0
 django-wysiwyg==0.8.0
 djangosecure==0.0.6
 dnspython==1.15.0
-ecdsa==0.13
+ecdsa==0.13.3
 email-validator==1.0.3
 entrypoints==0.2.3.post1
 fail2ban==0.10.2
