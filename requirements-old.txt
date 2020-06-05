@@ -27,7 +27,7 @@ cupshelpers==1.0
 cycler==0.10.0
 debtags==2.1
 decorator==4.3.0
-Django==2.0.3
+Django==2.2.13
 django-filebrowser-no-grappelli==3.7.4
 django-session-idle-timeout==1.4.2
 django-sslserver==0.20
